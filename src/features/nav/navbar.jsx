@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink, useHistory } from 'react-router-dom';
-import { Button, Container, Menu, Segment } from 'semantic-ui-react';
+import { Button, Container, Menu } from 'semantic-ui-react';
 import SignedInMenu from './SignedInmenu';
 import SignedOutMenu from './SignedOutMenu';
 
@@ -24,6 +24,7 @@ export default function NavBar({setFormOpen}){
             Re-vents
           </Menu.Item>
           <Menu.Item as={NavLink} to="/events" name="Events" />
+          <Menu.Item as={NavLink} to="/sandbox" name="Sandbox" />
           {authenticated && (
             <Menu.Item as={NavLink} to="/createEvent">
               <Button positive inverted content="Create Event" />
